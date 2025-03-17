@@ -19,3 +19,7 @@ $router->get('/', function () use ($router) {
 
 
 $router->post('/login', 'UserController@getUsers');
+
+$router->post('/create', 'ProductController@createProduct');
+$router->post('/buy/{id}', 'ProductController@buyProduct');
+$router->post('inactive/{id}', 'ProductController@inactiveProduct');
