@@ -1,6 +1,7 @@
 <div class="container">
     <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
         <h3>Login To Continue</h3>
+        <p class="error" *ngIf="loginError">{{loginError}}</p>
         <mat-form-field>
             <mat-label>Username</mat-label>
             <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="username">
